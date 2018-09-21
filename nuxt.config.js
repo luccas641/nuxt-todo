@@ -4,7 +4,6 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   }
 } : {}
 
-
 module.exports = {
   ...routerBase,
   /*
@@ -30,6 +29,9 @@ module.exports = {
   /*
   ** Build configuration
   */
+  generate: {
+    fallback: 'index.html',
+  },
   build: {
     /*
     ** Run ESLint on save
