@@ -1,4 +1,12 @@
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/nuxt-todo/'
+  }
+} : {}
+
+
 module.exports = {
+  ...routerBase,
   /*
   ** Headers of the page
   */
